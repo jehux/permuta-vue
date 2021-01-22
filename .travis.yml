@@ -1,11 +1,14 @@
-language: node_js
+languaje: node_js
 node_js:
-  - lts/*
+  - "node"
 cache: npm
-script:
-  - npm run deploy
+
+script: npm run build
+
 deploy:
   provider: pages
-  local_dir: build
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN 
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  local_dir: dist
+  on:
+    branch: master
