@@ -1,7 +1,6 @@
 <template>
-  <div class="about">
-    
-		<div class="back-img">
+    <div class="login">
+        <div class="back-img">
 			<div class="d-flex justify-content-center h-100">
 				<div class="card">
 					<div class="card-header">
@@ -36,38 +35,35 @@
 				</div>
 			</div>
 		</div>
-    
-  </div>
+    </div>
 </template>
-
 <style scoped>
 	.mi-navbar{
 		background-color: #090f1d;
 	}
-	body{
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-attachment: fixed;
-        background-position:center;
-        width:100%;
-        height: 100%;  
-    }
 	.back-img{
+        background-image: url("../assets/img/normal.png");
+        /*background-color: brown;*/
+        width: 100%;
         height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
         position: absolute;
+        text-align: center;
         z-index: 1;
-        padding: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-	.back-img:before {
+    .back-img:before {
         content:'';
-        position: relative;
+        position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        width:100%;
-        height:100%;
+        background-color: rgba(0,0,0,0.3);
     }
 
 	.card{
